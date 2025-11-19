@@ -159,107 +159,239 @@
 
 
 
+
 <head>
-  <meta charset="UTF-8">
-  <title>LVT Hero Section</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Fonts: подключите свои файлы! -->
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Bebas Neue', Arial, sans-serif;
-      background: #000;
-      overflow-x: hidden;
-    }
-    .hero-black-bg {
-      position: relative;
-      width: 100vw;
-      height: 860px;
-      background: #111;
-      box-sizing: border-box;
-    }
-    .text-segodnya {
-      position: absolute;
-      width:83px; height:20px;
-      left:25px; top:1100px;
-      font-family: 'Bebas Neue', Arial, sans-serif;
-      font-size:20px; color:#fff;
-      letter-spacing:0.16em;
-      line-height:20px;
-    }
-    .text-industrial {
-      position: absolute;
-      width:399px; height:269px;
-      left:25px; top:1162px;
-      font-family: 'Bebas Neue', Arial, sans-serif;
-      font-size:64px; color: #fff;
-      letter-spacing: 0;
-      line-height: 1.4;
-      white-space: pre-line;
-    }
-    .text-za {
-      position: absolute;
-      width:83px; height:53px;
-      left:108px; top:1162px;
-      font-family: 'Scandilover Script', cursive;
-      font-size:52px; color: #fff;
-      letter-spacing: 0.16em;
-      line-height:53px;
-    }
-    .text-desc {
-      position: absolute;
-      width:268px; height:196px;
-      left:19px; top:1585px;
-      font-family: 'Bebas Neue', Arial, sans-serif;
-      font-size:18px;
-      color: #fff;
-      letter-spacing:0;
-      line-height:1.4;
-      white-space: pre-line;
-    }
-    .logo-img {
-      position: absolute;
-      width:701px; height:466px;
-      left:435px; top:1262px;
-      object-fit: contain;
-      background: none;
-    }
-    .line-1 {
-      position: absolute;
-      left: -34px; top:1299px;
-      width:1px; height:460px;
-      background: #fff;
-    }
-    .line-2 {
-      position: absolute;
-      left: -33px; top:1395px;
-      width:3px; height:129px;
-      background: #fff;
-    }
-    /* Предупреждение: подключите Scandilover Script вручную через @font-face или Google Fonts (если доступно) */
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЛВТ - Развитие промышленности России</title>
+    <style>
+        @font-face {
+            font-family: 'Bebas Neue Cyrillic';
+            src: url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Scandilover Script';
+            src: local('Arial'), local('Helvetica');
+            font-weight: normal;
+            font-style: italic;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Bebas Neue', Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .hero-black-bg {
+            position: relative;
+            width: 100%;
+            height: 860px;
+            background-color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 60px;
+        }
+
+        .content-left {
+            position: relative;
+            max-width: 500px;
+            z-index: 10;
+        }
+
+        .content-left::before {
+            content: '';
+            position: absolute;
+            left: -40px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 3px;
+            height: 129px;
+            background-color: #fff;
+        }
+
+        .vertical-line {
+            position: absolute;
+            left: 60px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 460px;
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .label-today {
+            width: 83px;
+            height: 20px;
+            font-family: 'Bebas Neue', Arial, sans-serif;
+            font-size: 20px;
+            letter-spacing: 0.16em;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+
+        .main-title {
+            width: 399px;
+            height: 269px;
+            font-family: 'Bebas Neue', Arial, sans-serif;
+            font-size: 64px;
+            letter-spacing: 0;
+            line-height: 1.4;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .handwritten-text {
+            display: inline-block;
+            width: 83px;
+            height: 53px;
+            font-family: 'Brush Script MT', cursive;
+            font-size: 52px;
+            letter-spacing: 0.16em;
+            font-style: italic;
+            position: relative;
+            margin: 0 10px;
+            vertical-align: middle;
+            line-height: 1;
+        }
+
+        .description-text {
+            width: 268px;
+            height: 196px;
+            font-family: 'Bebas Neue', Arial, sans-serif;
+            font-size: 18px;
+            letter-spacing: 0;
+            line-height: 1.4;
+            margin-top: 60px;
+            opacity: 0.9;
+        }
+
+        .content-right {
+            position: relative;
+            z-index: 5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+            max-width: 800px;
+            margin-left: 100px;
+        }
+
+        .triangle-image {
+            width: 701px;
+            height: 466px;
+            object-fit: contain;
+        }
+
+        @media (max-width: 1200px) {
+            .hero-black-bg {
+                flex-direction: column;
+                height: auto;
+                padding: 60px 40px;
+                align-items: flex-start;
+            }
+
+            .content-left {
+                max-width: 100%;
+            }
+
+            .main-title {
+                width: 100%;
+                max-width: 500px;
+                height: auto;
+            }
+
+            .description-text {
+                width: 100%;
+                max-width: 350px;
+                height: auto;
+            }
+
+            .content-right {
+                margin-left: 0;
+                margin-top: 60px;
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .triangle-image {
+                width: 100%;
+                height: auto;
+                max-width: 600px;
+            }
+
+            .vertical-line {
+                left: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-black-bg {
+                padding: 40px 20px;
+            }
+
+            .main-title {
+                font-size: 48px;
+            }
+
+            .handwritten-text {
+                font-size: 40px;
+            }
+
+            .description-text {
+                font-size: 16px;
+            }
+
+            .content-left::before {
+                left: -20px;
+                height: 100px;
+            }
+
+            .vertical-line {
+                left: 20px;
+                height: 300px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="hero-black-bg"></div>
-  <div class="text-segodnya">Сегодня</div>
-  <div class="text-industrial">
-    МЫ — РАЗВИТИЕ ПРОМЫШЛЕННОСТИ РОССИИ
-  </div>
-  <div class="text-za">за</div>
-  <div class="text-desc">
-    ЛВТ ПОМОГАЕТ В ВЫСОКОТЕМПЕРАТУРНОЙ ТЕРМООБРАБОТКЕ МЕТАЛЛОВ,
-    ПРОИЗВОДСТВЕ РАДИОЭЛЕКТРОННЫХ КОМПОНЕНТОВ И ТЕХНИЧЕСКОЙ КЕРАМИКИ,
-    А ТАКЖЕ ПРИ ЛАБОРАТОРНЫХ ИССЛЕДОВАНИЯХ И НАУЧНЫХ ЭКСПЕРИМЕНТАХ
-  </div>
-  <img
-    class="logo-img"
-    src="https://psv4.userapi.com/s/v1/d2/yerPjvufhXdq59f06X7UNcnF2fqPlCweS6IplGnJu5H3Bz8JVtid-lJaLMOje4AA852ux_wGWMHZFFTTgsLQGBUw8rOxGDgu4SIXOU2ItcHn5vy7HlnMoiU_dojtDiVTELPJrkr7LFdI/Firmenny_znak_8.png"
-    alt="Фирменный знак"
-  />
-  <div class="line-1"></div>
-  <div class="line-2"></div>
+    <section class="hero-black-bg">
+        <div class="vertical-line"></div>
+        
+        <div class="content-left">
+            <div class="label-today">Сегодня</div>
+            
+            <h1 class="main-title">
+                МЫ<span class="handwritten-text">за</span>РАЗВИТИЕ ПРОМЫШЛЕННОСТИ РОССИИ
+            </h1>
+            
+            <p class="description-text">
+                ЛВТ  ПОМОГАЕТ В ВЫСОКОТЕМПЕРАТУРНОЙ ТЕРМООБРАБОТКЕ МЕТАЛЛОВ,
+                ПРОИЗВОДСТВЕ РАДИОЭЛЕКТРОННЫХ КОМПОНЕНТОВ И ТЕХНИЧЕСКОЙ КЕРАМИКИ, 
+                А ТАКЖЕ ПРИ ЛАБОРАТОРНЫХ ИССЛЕДОВАНИЯХ  И НАУЧНЫХ ЭКСПЕРИМЕНТАХ
+            </p>
+        </div>
+
+        <div class="content-right">
+            <img 
+                src="https://psv4.userapi.com/s/v1/d2/yerPjvufhXdq59f06X7UNcnF2fqPlCweS6IplGnJu5H3Bz8JVtid-lJaLMOje4AA852ux_wGWMHZFFTTgsLQGBUw8rOxGDgu4SIXOU2ItcHn5vy7HlnMoiU_dojtDiVTELPJrkr7LFdI/Firmenny_znak_8.png" 
+                alt="ЛВТ Фирменный знак" 
+                class="triangle-image"
+            />
+        </div>
+    </section>
+
 
 </body>
 </html>
