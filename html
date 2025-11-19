@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Лаборатория Высоких Температур</title>
-    <link href="https://fonts.cdnfonts.com/css/bebas-neue-cyrillic" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Bebas Neue Cyrillic -->
+    <link href="https://fonts.cdnfonts.com/css/bebas-neue-cyrillic" rel="stylesheet">
+    <!-- Montserrat основной -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <style>
         @font-face {
@@ -90,7 +92,7 @@
         .hero-black-bg {
             background: #000;
             width: 100vw;
-            height: 286px;
+            height: 286px; /* 1180 - 894 */
         }
         .text-science {
             position: absolute;
@@ -104,7 +106,7 @@
         .text-laboratory {
             position: absolute;
             left: 5%; top: 697px; width: 60vw; min-width: 220px;
-            font-family: 'Bebas Neue Cyrillic', sans-serif;
+            font-family: 'Bebas Neue Cyrillic', 'Bebas Neue', 'Arial', sans-serif;
             font-size: 70px; color: #fff; text-align: left;
             letter-spacing: 0; line-height: 1.4; text-transform: uppercase; z-index: 3;
         }
@@ -118,6 +120,7 @@
     </style>
 </head>
 <body>
+    <!-- Fixed Header -->
     <header class="header">
         <div class="header-content">
             <div class="logo">
@@ -126,6 +129,7 @@
             <button class="btn-contacts">КОНТАКТЫ</button>
         </div>
     </header>
+    <!-- Hero Section -->
     <section class="hero-section">
         <div class="hero-image-bg">
             <div class="text-science">
@@ -139,5 +143,123 @@
         </div>
         <div class="hero-black-bg"></div>
     </section>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <title>LVT Hero Section</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Fonts: подключите свои файлы! -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Bebas Neue', Arial, sans-serif;
+      background: #000;
+      overflow-x: hidden;
+    }
+    .hero-black-bg {
+      position: relative;
+      width: 100vw;
+      height: 860px;
+      background: #111;
+      box-sizing: border-box;
+    }
+    .text-segodnya {
+      position: absolute;
+      width:83px; height:20px;
+      left:25px; top:1100px;
+      font-family: 'Bebas Neue', Arial, sans-serif;
+      font-size:20px; color:#fff;
+      letter-spacing:0.16em;
+      line-height:20px;
+    }
+    .text-industrial {
+      position: absolute;
+      width:399px; height:269px;
+      left:25px; top:1162px;
+      font-family: 'Bebas Neue', Arial, sans-serif;
+      font-size:64px; color: #fff;
+      letter-spacing: 0;
+      line-height: 1.4;
+      white-space: pre-line;
+    }
+    .text-za {
+      position: absolute;
+      width:83px; height:53px;
+      left:108px; top:1162px;
+      font-family: 'Scandilover Script', cursive;
+      font-size:52px; color: #fff;
+      letter-spacing: 0.16em;
+      line-height:53px;
+    }
+    .text-desc {
+      position: absolute;
+      width:268px; height:196px;
+      left:19px; top:1585px;
+      font-family: 'Bebas Neue', Arial, sans-serif;
+      font-size:18px;
+      color: #fff;
+      letter-spacing:0;
+      line-height:1.4;
+      white-space: pre-line;
+    }
+    .logo-img {
+      position: absolute;
+      width:701px; height:466px;
+      left:435px; top:1262px;
+      object-fit: contain;
+      background: none;
+    }
+    .line-1 {
+      position: absolute;
+      left: -34px; top:1299px;
+      width:1px; height:460px;
+      background: #fff;
+    }
+    .line-2 {
+      position: absolute;
+      left: -33px; top:1395px;
+      width:3px; height:129px;
+      background: #fff;
+    }
+    /* Предупреждение: подключите Scandilover Script вручную через @font-face или Google Fonts (если доступно) */
+  </style>
+</head>
+<body>
+  <div class="hero-black-bg"></div>
+  <div class="text-segodnya">Сегодня</div>
+  <div class="text-industrial">
+    МЫ — РАЗВИТИЕ ПРОМЫШЛЕННОСТИ РОССИИ
+  </div>
+  <div class="text-za">за</div>
+  <div class="text-desc">
+    ЛВТ ПОМОГАЕТ В ВЫСОКОТЕМПЕРАТУРНОЙ ТЕРМООБРАБОТКЕ МЕТАЛЛОВ,
+    ПРОИЗВОДСТВЕ РАДИОЭЛЕКТРОННЫХ КОМПОНЕНТОВ И ТЕХНИЧЕСКОЙ КЕРАМИКИ,
+    А ТАКЖЕ ПРИ ЛАБОРАТОРНЫХ ИССЛЕДОВАНИЯХ И НАУЧНЫХ ЭКСПЕРИМЕНТАХ
+  </div>
+  <img
+    class="logo-img"
+    src="https://psv4.userapi.com/s/v1/d2/yerPjvufhXdq59f06X7UNcnF2fqPlCweS6IplGnJu5H3Bz8JVtid-lJaLMOje4AA852ux_wGWMHZFFTTgsLQGBUw8rOxGDgu4SIXOU2ItcHn5vy7HlnMoiU_dojtDiVTELPJrkr7LFdI/Firmenny_znak_8.png"
+    alt="Фирменный знак"
+  />
+  <div class="line-1"></div>
+  <div class="line-2"></div>
+
 </body>
 </html>
